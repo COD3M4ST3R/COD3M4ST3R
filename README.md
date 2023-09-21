@@ -19,7 +19,7 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
         std::vector<std::string> m_technologies;
 
     public:
-        Me(const std::string &p_gender, // it is a boolean. Just identifies itself as a vector.
+        Me(const std::string &p_gender, // it is a boolean. Just identifies itself as a string.
            const std::string &p_address, 
            const std::string &p_name, 
            const std::string &p_title, 
