@@ -11,6 +11,7 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
 
     private:
         std::string m_name;
+        std::string m_website; // you should check it is beautiful, expecially the parallax.
         std::string m_title;
         std::string m_message;
         std::vector<std::string> m_fields;
@@ -20,7 +21,8 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
     public:
         Me(const std::string &p_gender, // it is a boolean. Just identifies itself as a string.
            const std::string &p_address, 
-           const std::string &p_name, 
+           const std::string &p_name,
+           const std::string &p_website, 
            const std::string &p_title, 
            const std::string &p_message,
            const std::vector<std::string> &p_fields, 
@@ -29,7 +31,8 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
            : 
            Human(p_gender),
            m_address(p_address), 
-           m_name(p_name), 
+           m_name(p_name),
+           m_website(p_website),
            m_title(p_title), 
            m_message(p_message),
            m_fields(p_fields), 
@@ -41,8 +44,9 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
 int main(int argc, char *argv[])
 {
     Me me("Male",
-          "Frankfurt", 
-          "Nadir Suhan ILTER", 
+          "Frankfurt, GERMANY", 
+          "Nadir Suhan ILTER",
+          "suhan.website", 
           "Computer Engineer", 
           "Willkommen zu my crib yo!", 
           {"Deep Learning", "Rockets", "Back-End", "Algorithms"}, 
