@@ -13,7 +13,6 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
         std::string m_name;
         std::string m_website; // you should check it is beautiful, expecially the parallax.
         std::string m_title;
-        std::string m_message;
         std::vector<std::string> m_fields;
         std::vector<std::string> m_languages;
         std::vector<std::string> m_technologies;
@@ -24,7 +23,6 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
            const std::string &p_name,
            const std::string &p_website, 
            const std::string &p_title, 
-           const std::string &p_message,
            const std::vector<std::string> &p_fields, 
            const std::vector<std::string> &p_technologies,
            const std::vector<std::string> &p_languages = {"English", "German", "Turkish", "Gibberish"}) 
@@ -34,7 +32,6 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
            m_name(p_name),
            m_website(p_website),
            m_title(p_title), 
-           m_message(p_message),
            m_fields(p_fields), 
            m_technologies(p_technologies),
            m_languages(p_languages){
@@ -48,7 +45,6 @@ int main(int argc, char *argv[])
           "Nadir Suhan ILTER",
           "suhan.website", 
           "Computer Engineer", 
-          "Willkommen zu my crib yo!", 
           {"Deep Learning", "Rockets", "Back-End", "Algorithms"}, 
           {"Everything, just understand that people can learn; when they know what they need to learn."}, 
           {"C", "C++", "C#", "Java", "Python", "BashScript", "R"});
