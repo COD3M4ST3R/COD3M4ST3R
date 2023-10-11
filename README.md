@@ -41,14 +41,16 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
 
 int main(int argc, char *argv[])
 {
-    Me me("Male",
-          "Frankfurt, GERMANY", 
-          "Nadir Suhan ILTER",
-          "suhan.website", 
-          "Computer Engineer", 
-          {"Deep Learning", "Rockets", "Back-End", "Algorithms"}, 
-          {"Everything, just understand that people can learn; when they know what they need to learn."}, 
-          {"C", "C++", "C#", "Java", "Python", "BashScript", "R"});
+    std::unique_ptr<Me> me = std::make_unique<Me>(
+        "Male",
+        "Frankfurt, GERMANY", 
+        "Nadir Suhan ILTER",
+        "suhan.website", 
+        "Computer Engineer", 
+        std::vector<std::string>{"Deep Learning", "Rockets", "Back-End", "Algorithms"}, 
+        std::vector<std::string>{"Everything, just understand that people can learn; when they know what they need to learn."},
+        std::vector<std::string>{"C", "C++", "C#", "Java", "Python", "BashScript", "R"}
+    );
     
     return 0; // no worries, no problems.
 }
