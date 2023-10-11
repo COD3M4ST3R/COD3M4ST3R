@@ -18,24 +18,25 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
         std::vector<std::string> m_technologies;
 
     public:
-        Me(const std::string &p_gender, // it is a boolean. Just identifies itself as a string.
-           const std::string &p_address, 
-           const std::string &p_name,
-           const std::string &p_website, 
-           const std::string &p_title, 
-           const std::vector<std::string> &p_fields, 
-           const std::vector<std::string> &p_technologies,
-           const std::vector<std::string> &p_languages = {"English", "German", "Turkish", "Gibberish"}) 
-           : 
-           Human(p_gender),
-           m_address(p_address), 
-           m_name(p_name),
-           m_website(p_website),
-           m_title(p_title), 
-           m_fields(p_fields), 
-           m_technologies(p_technologies),
-           m_languages(p_languages){
-        }
+        static inline const std::string_view message = "Greetings, I hope you have an awesome day!";
+        explicit Me(
+            const std::string &p_gender, // it is a boolean. Just identifies itself as a string.
+            const std::string &p_address, 
+            const std::string &p_name,
+            const std::string &p_website, 
+            const std::string &p_title, 
+            const std::vector<std::string> &p_fields, 
+            const std::vector<std::string> &p_technologies,
+            const std::vector<std::string> &p_languages = {"English", "German", "Turkish", "Gibberish"}
+        ): 
+        Human(p_gender),
+        m_address(p_address), 
+        m_name(p_name),
+        m_website(p_website),
+        m_title(p_title), 
+        m_fields(p_fields), 
+        m_technologies(p_technologies),
+        m_languages(p_languages){}
 };
 
 int main(int argc, char *argv[])
@@ -49,6 +50,6 @@ int main(int argc, char *argv[])
           {"Everything, just understand that people can learn; when they know what they need to learn."}, 
           {"C", "C++", "C#", "Java", "Python", "BashScript", "R"});
     
-    return 0; no worries, no problems.
+    return 0; // no worries, no problems.
 }
 ```
