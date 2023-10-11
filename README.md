@@ -41,7 +41,7 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
         ~Me()
         {
             delete m_name;
-            delete m_website; // you should check it is beautiful, expecially the parallax.
+            delete m_website;
             delete m_title;
             delete m_fields;
             delete m_languages;
