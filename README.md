@@ -7,15 +7,15 @@
 class Me : public Human // weird mulfunctions keeps getting bigger and bigger, needs a fix a.s.a.p.
 {
     protected:
-        std::string m_address; // much protected.
+        std::string *m_address; // much protected.
 
     private:
-        std::string m_name;
-        std::string m_website; // you should check it is beautiful, expecially the parallax.
-        std::string m_title;
-        std::vector<std::string> m_fields;
-        std::vector<std::string> m_languages;
-        std::vector<std::string> m_technologies;
+        std::string *m_name;
+        std::string *m_website; // you should check it is beautiful, expecially the parallax.
+        std::string *m_title;
+        std::vector<std::string> *m_fields;
+        std::vector<std::string> *m_languages;
+        std::vector<std::string> *m_technologies;
 
     public:
         static inline const std::string_view message = "Greetings, I hope you have an awesome day!";
@@ -30,13 +30,23 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
             const std::vector<std::string> &p_languages = {"English", "German", "Turkish", "Gibberish"}
         ): 
         Human(p_gender),
-        m_address(p_address), 
-        m_name(p_name),
-        m_website(p_website),
-        m_title(p_title), 
-        m_fields(p_fields), 
-        m_technologies(p_technologies),
-        m_languages(p_languages){}
+        m_address(new std::string(p_address)), 
+        m_name(new std::string(p_name)),
+        m_website(new std::string(p_website)),
+        m_title(new std::string(p_title)), 
+        m_fields(new std::vector<std::string>(p_fields)), 
+        m_technologies(new std::vector<std::string>(p_technologies)),
+        m_languages(new std::vector<std::string>(p_languages)){}
+
+        ~Me()
+        {
+            delete m_name;
+            delete m_website; // you should check it is beautiful, expecially the parallax.
+            delete m_title;
+            delete m_fields;
+            delete m_languages;
+            delete m_technologies; 
+        }
 };
 
 int main(int argc, char *argv[])
