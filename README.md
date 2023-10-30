@@ -7,27 +7,27 @@
 class Me : public Human // weird mulfunctions keeps getting bigger and bigger, needs a fix a.s.a.p.
 {
     protected:
-        std::string *m_address; // much protected.
+        std::string* m_address; // much protected.
 
     private:
-        std::string *m_name;
-        std::string *m_website; // you should check it is beautiful, expecially the parallax.
-        std::string *m_title;
-        std::vector<std::string> *m_fields;
-        std::vector<std::string> *m_languages;
-        std::vector<std::string> *m_technologies;
+        std::string* m_name;
+        std::string* m_website; // you should check it is beautiful, expecially the parallax.
+        std::string* m_title;
+        std::vector<std::string>* m_fields;
+        std::vector<std::string>* m_languages;
+        std::vector<std::string>* m_technologies;
 
     public:
         static inline const std::string_view message = "Greetings, I hope you have an awesome day!";
         explicit Me(
-            const std::string &p_gender, // it is a boolean. Just identifies itself as a string.
-            const std::string &p_address, 
-            const std::string &p_name,
-            const std::string &p_website, 
-            const std::string &p_title, 
-            const std::vector<std::string> &p_fields, 
-            const std::vector<std::string> &p_technologies,
-            const std::vector<std::string> &p_languages = {"English", "German", "Turkish", "Gibberish"}
+            const std::string& p_gender, // it is a boolean. Just identifies itself as a string.
+            const std::string& p_address, 
+            const std::string& p_name,
+            const std::string& p_website, 
+            const std::string& p_title, 
+            const std::vector<std::string>& p_fields, 
+            const std::vector<std::string>& p_technologies,
+            const std::vector<std::string>& p_languages = {"English", "German", "Turkish", "Gibberish"}
         ) : 
             Human(p_gender),
             m_address(new std::string(p_address)), 
