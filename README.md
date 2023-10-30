@@ -29,7 +29,7 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
             const std::vector<std::string>& p_technologies,
             const std::vector<std::string>& p_languages = {"English", "German", "Turkish", "Gibberish"}
         ) : 
-            Human((p_gender)),
+            Human(p_gender),
             m_address(p_address), 
             m_name(p_name),
             m_website(p_website),
