@@ -7,15 +7,15 @@
 class Me : public Human // weird mulfunctions keeps getting bigger and bigger, needs a fix a.s.a.p.
 {
     protected:
-        std::string* m_address; // much protected.
+        std::string m_address; // much protected.
 
     private:
-        std::string* m_name;
-        std::string* m_website; // you should check it is beautiful, expecially the parallax.
-        std::string* m_title;
-        std::vector<std::string>* m_fields;
-        std::vector<std::string>* m_languages;
-        std::vector<std::string>* m_technologies;
+        std::string m_name;
+        std::string m_website; // you should check it is beautiful, expecially the parallax.
+        std::string m_title;
+        std::vector<std::string> m_fields;
+        std::vector<std::string> m_languages;
+        std::vector<std::string> m_technologies;
 
     public:
         static inline const std::string_view message = "Greetings, I hope you have an awesome day!";
@@ -30,43 +30,23 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
             const std::vector<std::string>& p_languages = {"English", "German", "Turkish", "Gibberish"}
         ) : 
             Human(p_gender),
-            m_address(new std::string(p_address)), 
-            m_name(new std::string(p_name)),
-            m_website(new std::string(p_website)),
-            m_title(new std::string(p_title)), 
-            m_fields(new std::vector<std::string>(p_fields)), 
-            m_technologies(new std::vector<std::string>(p_technologies)),
-            m_languages(new std::vector<std::string>(p_languages)){}
-
-    
-        ~Me()
-        {
-            delete m_name;
-            delete m_website;
-            delete m_title;
-            delete m_fields;
-            delete m_languages;
-            delete m_technologies; 
-        }
+            m_address(p_address), 
+            m_name(p_name),
+            m_website(p_website),
+            m_title(p_title), 
+            m_fields(p_fields), 
+            m_technologies(p_technologies),
+            m_languages(p_languages){}
 
         Me(Me&& other) noexcept :
             Human(std::move(other.get_gender())),
-            m_address(other.m_address),
-            m_name(other.m_name),
-            m_website(other.m_website),
-            m_title(other.m_title),
-            m_fields(other.m_fields),
-            m_technologies(other.m_technologies),
-            m_languages(other.m_languages)
-            {
-                other.m_address = nullptr;
-                other.m_name = nullptr;
-                other.m_website = nullptr;
-                other.m_title = nullptr;
-                other.m_fields = nullptr;
-                other.m_technologies = nullptr;
-                other.m_languages = nullptr;
-            }
+            m_address(std::move(other.m_address)),
+            m_name(std::move(other.m_name)),
+            m_website(std::move(other.m_website)),
+            m_title(std::move(other.m_title)),
+            m_fields(std::move(other.m_fields)),
+            m_technologies(std::move(other.m_technologies)),
+            m_languages(std::move(other.m_languages)) {}
 };
 
 
