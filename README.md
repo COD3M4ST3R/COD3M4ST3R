@@ -4,7 +4,7 @@
 
 
 ```cpp
-class Me : public Human // weird mulfunctions keeps getting bigger and bigger, needs a fix a.s.a.p.
+class Me : protected Human // weird mulfunctions keeps getting bigger and bigger, needs a fix a.s.a.p.
 {
     protected:
         std::string m_address; // much protected.
@@ -27,8 +27,7 @@ class Me : public Human // weird mulfunctions keeps getting bigger and bigger, n
             const std::string& p_title, 
             const std::vector<std::string>& p_fields, 
             const std::vector<std::string>& p_technologies,
-            const std::vector<std::string>& p_languages = {"English", "German", "Turkish", "Gibberish"}
-        ) : 
+            const std::vector<std::string>& p_languages = {"English", "German", "Turkish", "Gibberish"}) : 
             Human(p_gender),
             m_address(p_address), 
             m_name(p_name),
