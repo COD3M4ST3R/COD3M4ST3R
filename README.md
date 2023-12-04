@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
         "Computer Engineer", 
         std::vector<std::string>{"Deep Learning", "Rockets", "Back-End", "Algorithms"}, 
         std::vector<std::string>{"Everything, just understand that people can learn; when they know what they need to learn."},
-        std::vector<std::string>{"C", "C++", "C#", "Java", "Python", "BashScript", "R"}
+        std::vector<std::string>{"C", "C++", "C#", "Java", "Python", "BashScript", "R", "Assembly"}
     );
     
     return 0; // no worries, no problems.
