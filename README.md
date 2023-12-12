@@ -1,7 +1,7 @@
 
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=COD3M4ST3R&left_color=black&right_color=transparent)
 
-
+![giphy](https://github.com/COD3M4ST3R/COD3M4ST3R/assets/49036494/44fbc889-4ac0-4b10-a62a-00a9cef39588)
 
 ```cpp
 class Me : protected Human // weird mulfunctions keeps getting bigger and bigger, needs a fix a.s.a.p.
