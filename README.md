@@ -4,14 +4,14 @@
 ![giphy](https://github.com/COD3M4ST3R/COD3M4ST3R/assets/49036494/44fbc889-4ac0-4b10-a62a-00a9cef39588)
 
 ```cpp
-class Me : protected Human // weird mulfunctions keeps getting bigger and bigger, needs a fix a.s.a.p.
+class Me : protected Human // kinda.
 {
     protected:
-        std::string m_address; // much protected.
+        std::string m_address;
 
     private:
         std::string m_name;
-        std::string m_website; // you should check it is beautiful, expecially the parallax.
+        std::string m_website; // you should check, it is beautiful.
         std::string m_title;
         std::vector<std::string> m_fields;
         std::vector<std::string> m_languages;
@@ -53,15 +53,15 @@ int main(int argc, char *argv[])
 {
     std::unique_ptr<Me> me = std::make_unique<Me>(
         "Male",
-        "Frankfurt, GERMANY", 
+        "Aschaffenburg, GERMANY", 
         "Nadir Suhan ILTER",
-        "suhan.website", 
+        "suhanilter.com", 
         "Computer Engineer", 
         std::vector<std::string>{"Deep Learning", "Rockets", "Back-End", "Algorithms"}, 
-        std::vector<std::string>{"Everything, just understand that people can learn; when they know what they need to learn."},
+        std::vector<std::string>{"Everything, just understand that people can learn; when they know what they need to learn and how."},
         std::vector<std::string>{"C", "C++", "C#", "Java", "Python", "BashScript", "R", "Assembly"}
     );
     
-    return 0; // no worries, no problems.
+    return 0;
 }
 ```
